@@ -12,6 +12,7 @@ This script need 2 pre-installed tools:
 With the bam-readcount and MAFFT intalled, you can use conda to install all dependencies:
 
 > conda env create -f mFinder.yml
+
 > conda activate mFinder
 
 ## Usage
