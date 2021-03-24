@@ -31,7 +31,7 @@ corted_bam = sorted bam file that was used to generate the consensus sequences
 ## Outputs
 - *.tsv.fmt.minors.tsv.fmt - tab separed file with the nucleotide diversity by intrahost variant postition, the nucleotide and depth of minor and major variants
 - *.algn.major.fa - fasta alignment with the major variant consensus sequence
-- *.algn.major.fa - fasta alignment with the minor variant consensus sequence
+- *.algn.minor.fa - fasta alignment with the minor variant consensus sequence
 
 ## Some limitations
 - The name of consensus and sorted_bam files should contain the sequence name header of consenus sequences;
