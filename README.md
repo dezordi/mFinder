@@ -21,7 +21,7 @@ consensus = the consensus genome that will be screened to intrahost variants
 corted_bam = sorted bam file that was used to generate the consensus sequences
 
 - Running 
-> bash main.sh <reference> <consensus> <sorted_bam>
+> bash main.sh reference consensus sorted_bam
 
 - Test files:
 > bash main.sh test_files/NC_045512v2.fa test_files/SRR13418742.consensus.fa test_files/SRR13418742.sorted.bam
