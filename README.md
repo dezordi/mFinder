@@ -17,9 +17,10 @@ With the bam-readcount and MAFFT intalled, you can use conda to install all depe
 
 ## Usage
 The main.sh compile all steps to perform the analysis, and 3 files should be parsed:
-reference = reference wuhan genome (NC_045512.2)
-consensus = the consensus genome that will be screened to intrahost variants
-corted_bam = sorted bam file that was used to generate the consensus sequences
+- reference = reference wuhan genome (NC_045512.2)
+- consensus = the consensus genome that will be screened to intrahost variants
+- sorted_bam = sorted bam file that was used to generate the consensus sequences
+
 
 - Running 
 > bash main.sh reference consensus sorted_bam
