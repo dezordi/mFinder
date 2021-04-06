@@ -1,0 +1,25 @@
+* Phylodynamics: 
+28-AM-I_bdsky5p_biMonth.xml -> BDSKY model applied to the B.1.1.28-AM-I clade
+195-AM_bdsky6p_month.xml -> BDSKY model applied to the B.1.195-AM clade
+P1_bdsky2d_equal.xml -> BDSKY model applied to the P.1 lineage 
+
+* Molecular clock and Phylogeography:
+B.1.195-World-AM_ORF1Adel+phylogeo.xml -> Beast analysis for B.1.1.195 lineage with discrete phylogeography and incorporating the 195-AM characteristic deletion as an informative trait
+
+* Discrete phylogeography:
+28-AM-I-discrete phylogeo.xml -> Beast analysis for 28-AM-I  lineage with discrete phylogeography
+28-AM-II+P1-discrete phylogeo.xml -> Beast analysis for 28-AM-II+P.1  lineage with discrete phylogeography
+33-AM-I-discrete phylogeo.xml -> Beast analysis for 33-AM-I  lineage with discrete phylogeography
+195-AM-discrete phylogeo.xml -> Beast analysis for 195-AM-I  lineage with discrete phylogeography
+
+* Continous phylogeography:
+28-AM-I_strict.xml -> Beast analysis for 28-AM-I  lineage with continuous phylogeography employing the strict clock model
+28-AM-II_P1_strict.xml -> Beast analysis for 28-AM-II+P.1  lineage with continuous phylogeography employing the strict clock model
+195-AM_strict.xml -> Beast analysis for 195-AM  lineage with continuous phylogeography employing the strict clock model
+28-AM-II_P1_random_local.xml -> Beast analysis for B.1.1.28 lineage with continuous phylogeography employing the random local clock model
+28-AM-II_P1_fix_local.xml ->  Beast analysis for B.1.1.28 lineage with continuous phylogeography employing the fixed local clock model (P.1 clade was set to evolve according different evolutionary rates)
+
+* Spatial difusion (KML):
+28-AM-I.kml -> spatio-temporal reconstruction of the 28-AM-I lineage spread in Amazonas
+28-AM-II(P.1).kml -> spatio-temporal reconstruction of the 28-AM-II and P.1 lineages spread in Amazonas
+195-AM.kml -> spatio-temporal reconstruction of the 195-AM lineage spread in Amazonas
