@@ -154,6 +154,6 @@ with open(bam_rc_file+'.fmt.tsv','r') as bam_readcount_formated:
         (df['A_DEPTH'] >= depth_value) & (df['T_DEPTH'] > depth_value) & (df['C_DEPTH'] > depth_value) & (df['G_DEPTH'] > depth_value) & (df['A_DEPTH']/df['DEPTH'] >= per_limit) & (df['T_DEPTH']/df['DEPTH'] >= per_limit) & (df['C_DEPTH']/df['DEPTH'] >= per_limit) & (df['G_DEPTH']/df['DEPTH'] >= per_limit) & ((df['A_PLUS']/df['A_MINUS'] > 0.05) & (df['A_MINUS']/df['A_PLUS'] > 0.05)) & ((df['T_PLUS']/df['T_MINUS'] > 0.05) & (df['T_MINUS']/df['T_PLUS'] > 0.05)) & ((df['C_PLUS']/df['C_MINUS'] > 0.05) & (df['C_MINUS']/df['C_PLUS'] > 0.05)) & ((df['G_PLUS']/df['G_MINUS'] > 0.05) & (df['G_MINUS']/df['G_PLUS'] > 0.05))]
     minors = ['A/T','A/C','A/G','A/INDEL','T/C','T/G','T/INDEL','C/G','C/INDEL','G/INDEL','A/T/C','A/T/G','A/G/C','T/G/C','A/T/C/G']
     df['PUTATIVE_MINOR'] = np.select(conditions,minors,default='False')
-    df = df.loc[df['PUTATIVE_MINOR'] != "False"]
+    df = df.loc[df['MINOR'] != "False"]
     df.to_csv(bam_rc_file+'.fmt.minors.tsv',sep='\t',index=False)
 #os.remove(bam_rc_file+'.fmt.tsv')
