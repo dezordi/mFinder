@@ -111,11 +111,10 @@ with open(bam_rc_file,'r') as bc_file, open(bam_rc_file+'.fmt.tsv','w') as bc_fo
         if 'pos' in del_dict and int(line[1]) in del_dict['pos']:
             item_index = del_dict['pos'].index(int(line[1]))
             out_list.append([prefix,var_pos,region,int(var_depth)+int(del_dict['del_depth'][item_index]),A_depth,A_plus,A_minus,C_depth,C_plus,C_minus,G_depth,G_plus,G_minus,T_depth,T_plus,T_minus,del_dict['del_depth'][item_index],del_dict['del_depth_plus'][item_index],del_dict['del_depth_minus'][item_index],del_dict['deletion'][item_index]])
-            #print(del_dict['pos'][item_index],'\n',del_dict['deletion'][item_index])
         elif len(line) > 10 and '+' in indel_seq:
             out_list.append([prefix,var_pos,region,int(var_depth)+int(indel_depth),A_depth,A_plus,A_minus,C_depth,C_plus,C_minus,G_depth,G_plus,G_minus,T_depth,T_plus,T_minus,indel_depth,indel_plus,indel_minus,indel_seq])
         else:
-            out_list.append([prefix,var_pos,region,var_depth,A_depth,A_plus,A_minus,C_depth,C_plus,C_minus,G_depth,G_plus,G_minus,T_depth,T_plus,T_minus,'NA','NA','NA','NA'])
+            out_list.append([prefix,var_pos,region,var_depth,A_depth,A_plus,A_minus,C_depth,C_plus,C_minus,G_depth,G_plus,G_minus,T_depth,T_plus,T_minus,0,0,0,'Na'])
     output_csv_writer.writerows(out_list)
 
 with open(bam_rc_file+'.fmt.tsv','r') as bam_readcount_formated:
