@@ -36,7 +36,7 @@ for record in alignment:
         for line in minor_reader:
             if record.id == line[0]:
                 pos = int(line[1].rstrip('\n'))
-                minor = line[18].rstrip('\n')
+                minor = line[22].rstrip('\n')
                 new_seq_lst[pos-1] = minor
     for letter in new_seq_lst:
         new_seq += letter
@@ -53,7 +53,7 @@ for record in alignment:
         for line in minor_reader:
             if record.id == line[0]:
                 pos = int(line[1].rstrip('\n'))
-                major = line[17].rstrip('\n')
+                major = line[21].rstrip('\n')
                 new_seq_lst[pos-1] = major
     for letter in new_seq_lst:
         new_seq += letter
