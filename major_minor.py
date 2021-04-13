@@ -76,11 +76,11 @@ with open(input_file,'r') as minor_tsv:
             else:
                 if int(line[4]) > int(line[16]):
                     major = 'A'
-                    minor = line[19][1:]
+                    minor = 'A'+line[19][1:]
                     major_depth = line[4]
                     minor_depth = line[16]
                 else:
-                    major = line[19][1:]
+                    major = 'A'+line[19][1:]
                     minor = 'A'
                     major_depth = line[16]
                     minor_depth = line[4]
@@ -99,11 +99,11 @@ with open(input_file,'r') as minor_tsv:
             else:
                 if int(line[13]) > int(line[16]):
                     major = 'T'
-                    minor = line[19][1:]
+                    minor = 'T'+line[19][1:]
                     major_depth = line[13]
                     minor_depth = line[16]
                 else:
-                    major = line[19][1:]
+                    major = 'T'+line[19][1:]
                     minor = 'T'
                     major_depth = line[16]
                     minor_depth = line[13]
@@ -155,11 +155,11 @@ with open(input_file,'r') as minor_tsv:
             else:
                 if int(line[7]) > int(line[16]):
                     major = 'C'
-                    minor = line[19][1:]
+                    minor = 'C'+line[19][1:]
                     major_depth = line[7]
                     minor_depth = line[16]
                 else:
-                    major = line[19][1:]
+                    major = 'C'+line[19][1:]
                     minor = 'C'
                     major_depth = line[16]
                     minor_depth = line[7]
@@ -179,11 +179,11 @@ with open(input_file,'r') as minor_tsv:
             else:
                 if int(line[10]) > int(line[16]):
                     major = 'G'
-                    minor = line[19][1:]
+                    minor = 'G'+line[19][1:]
                     major_depth = line[10]
                     minor_depth = line[16]
                 else:
-                    major = line[19][1:]
+                    major = 'G'+line[19][1:]
                     minor = 'G'
                     major_depth = line[16]
                     minor_depth = line[10]

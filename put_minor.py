@@ -59,4 +59,4 @@ for record in alignment:
         new_seq += letter
     record = SeqRecord(Seq(new_seq), id=record.id+'_major', description = '')
     record_lst.append(record)
-    SeqIO.write(record_lst,output_handle_maj,'fasta')             
+    SeqIO.write(record_lst,output_handle_maj,'fasta')
