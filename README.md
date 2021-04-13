@@ -36,8 +36,7 @@ The main.sh compile all steps to perform the analysis, and 3 files should be par
 
 ## Some limitations
 - The name of consensus and sorted_bam files should contain the sequence name header of consenus sequences;
-- This set of scripts didn't recovery intrahost variants related do indel regions, these region ones should be investigated manually.
 
 ## Disclaimer
 
-- This script will continue to be developed to avoid erros related do sequence name, to remove the reference genome of output, to work with multiple sequences and to work with indel regions.
+- This script will continue to be developed to avoid erros related do sequence name, to remove the reference genome of output, to work with multiple sequences.
