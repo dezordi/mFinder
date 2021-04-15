@@ -38,5 +38,5 @@ The main.sh compile all steps to perform the analysis, and 3 files should be par
 - The name of consensus and sorted_bam files should contain the sequence name header of consenus sequences;
 
 ## Disclaimer
-
+- THE INFORMATION OF INDELS RELATED TO DIFFERENT ALLELE FREQUENCIES IS STILL UNDER DEVELOPMENT
 - This script will continue to be developed to avoid erros related do sequence name, to remove the reference genome of output, to work with multiple sequences.

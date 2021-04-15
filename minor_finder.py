@@ -155,4 +155,4 @@ with open(bam_rc_file+'.fmt.tsv','r') as bam_readcount_formated:
     df['PUTATIVE_MINOR'] = np.select(conditions,minors,default='False')
     df = df.loc[df['PUTATIVE_MINOR'] != "False"]
     df.to_csv(bam_rc_file+'.fmt.minors.tsv',sep='\t',index=False)
-#os.remove(bam_rc_file+'.fmt.tsv')
+os.remove(bam_rc_file+'.fmt.tsv')
