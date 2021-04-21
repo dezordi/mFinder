@@ -63,7 +63,37 @@ with open(bam_rc_file,'r') as bc_file, open(bam_rc_file+'.fmt.tsv','w') as bc_fo
         T_plus = re.sub(r".*:","",T_plus)
         T_minus = ":".join(T_depth_line.split(":", 7)[:7])
         T_minus = re.sub(r".*:","",T_minus)
-        if len(line) > 10:
+        major_depth_column = 0
+        major_depth = 0
+        if len(line) > 11: #bamreadcount output can have 11 or more columns, depending of number of putative indels
+            for i in range(10,len(line)):
+                #print(line[1],line[i])
+                indel_depth_line = line[i].rstrip('\n')
+                indel_seq = re.sub(r":.*","",indel_depth_line)
+                indel_depth = ":".join(indel_depth_line.split(":", 2)[:2])
+                indel_depth = re.sub(r".*:","",indel_depth)
+                if int(indel_depth) > int(major_depth):
+                    major_depth = indel_depth
+                    major_depth_column = i
+            indel_depth_line = line[major_depth_column].rstrip('\n')
+            indel_seq = re.sub(r":.*","",indel_depth_line)
+            indel_depth = ":".join(indel_depth_line.split(":", 2)[:2])
+            indel_depth = re.sub(r".*:","",indel_depth)
+            indel_plus = ":".join(indel_depth_line.split(":", 6)[:6])
+            indel_plus = re.sub(r".*:","",indel_plus)
+            indel_minus = ":".join(indel_depth_line.split(":", 7)[:7])
+            indel_minus = re.sub(r".*:","",indel_minus)
+            if '-' in indel_seq:
+                del_length = len(indel_seq)-1
+                #print(indel_seq,del_length,line[1])
+                for i in range(0,del_length):
+                    del_dict['pos'].append(int(line[1])+i)
+                    del_dict['deletion'].append(indel_seq)
+                    del_dict['del_depth'].append(indel_depth)
+                    del_dict['del_depth_plus'].append(indel_plus)
+                    del_dict['del_depth_minus'].append(indel_minus)
+            #print(line[1],indel_depth,indel_plus,indel_minus,indel_seq)
+        elif len(line) == 11:
             indel_depth_line = line[10].rstrip('\n')
             indel_seq = re.sub(r":.*","",indel_depth_line)
             indel_depth = ":".join(indel_depth_line.split(":", 2)[:2])
