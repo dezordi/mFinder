@@ -2,6 +2,10 @@
 
 This set of scripts was developed to identify and to generate intrahost/co-infection consensus genomes of SARS-CoV-2. The test sequences were generate by reference genome assembly with bowtie2 usign the SRR13418742 data from Gupta et al. 2021 [REF](https://www.microbiologyresearch.org/content/journal/jgv/10.1099/jgv.0.001562).
 
+## Disclaimer
+
+- This repository is out of date, the current development of this script was incorporated as a step of the workflow present in this [link](https://github.com/dezordi/ViralFlow) in [python_scripts/intrahost.py](https://github.com/dezordi/ViralFlow/blob/main/python_scripts/intrahost.py).
+
 ## Preparing the Enviroment
 
 This script need 2 pre-installed tools:
@@ -36,6 +40,4 @@ The main.sh compile all steps to perform the analysis, and 3 files should be par
 
 ## Some limitations
 - The name of consensus and sorted_bam files should contain the sequence name header of consenus sequences;
-
-## Disclaimer
-- The minor consensus version is based only on replacing the nucleotide from from the consensus (majority consensus) with the minor allele (supported by 5 to 49% of the reads), without any statistical method to reconstruct quasispecies genomic populations.
+- This set of scripts didn't recovery intrahost variants related do indel regions, these region ones should be investigated manually.
